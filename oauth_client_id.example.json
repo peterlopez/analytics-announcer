@@ -1,0 +1,8 @@
+{
+  "oauth2": {
+    "client_id": "your_client_id_goes_here.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/analytics.readonly"
+    ]
+  }
+}
