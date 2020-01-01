@@ -35,8 +35,22 @@ function zipDist(cb) {
   cb();
 }
 
+// Watch for changes within Vue.js app
+// and also in other extension related files
+function watch(cb) {
+  gulp.watch([
+    './src/**/*',
+    'index.html',
+    'background.js',
+    'manifest.json',
+    'assets/icons/*.*'
+    ], build);
+  cb();
+}
+
 const build = gulp.series(compileManifest, createDist);
 
+exports.watch = watch;
 exports.zip = zipDist;
 exports.build = build;
 exports.default = build;
