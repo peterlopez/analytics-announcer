@@ -1,10 +1,10 @@
 <template>
-<md-empty-state 
+<md-empty-state
   md-icon='./src/assets/google-analytics-logo.svg'
   md-label='Get Started'
   md-description='Click the button below to sign in to your Google Analytics account to get started.'>
 
-  <md-button 
+  <md-button
     id='js_google-signin'
     class='md-primary md-raised'
     @click='signin'>
@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  name: 'Welcome',
   methods: {
     signin: function(event) {
       // Disable button and show progress spinner

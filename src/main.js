@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Welcome from './components/Welcome.vue'
-import Interface from './components/Interface.vue'
 
 import 'normalize.css'
 

@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  name: 'Interface',
   data: () => ({
     showSidepanel: false,
     confirmDisconnect: false

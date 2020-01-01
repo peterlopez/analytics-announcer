@@ -10,12 +10,11 @@ import Welcome from './components/Welcome.vue';
 import Interface from './components/Interface.vue';
 
 export default {
-  name: 'app',
+  name: 'App',
   data: () => ({
   }),
   components: {
-    'welcome': Welcome,
-    'interface': Interface
+    Welcome, Interface
   },
   computed: {
     isAuthenticated: function() {
