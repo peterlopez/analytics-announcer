@@ -21,9 +21,11 @@ To install a developer build, follow the [Development Setup](https://github.com/
 
 ### Requirements
 
-Software:
+The following software should be installed:
 
+- Node
 - NPM or Yarn
+- NPM `gulp-cli` package installed globally
 
 For OAuth, create the following files in the root project directory:
 
@@ -55,8 +57,11 @@ In a terminal, from the project root directory, run:
 # install dependencies
 npm install
 
-# build for development
+# start webpack hot reloading
 npm run dev
+
+# in a separate process, start Gulp
+gulp watch
 ```
 
 ### Installing a developer build
