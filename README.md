@@ -2,11 +2,18 @@
 
 A Chrome extension for creating custom Google Analytics alerts.
 
-Built with Vue.js, Google Analytics Reporting API v4, and Google Analytics Management API v3
+Built using:
+- [Vue.js v2](https://vuejs.org/)
+- [Vue Material](vuematerial.io)
+- [Google Analytics Reporting API v4](https://developers.google.com/analytics/devguides/reporting/core/v4)
+- [Google Analytics Management API v3](https://developers.google.com/analytics/devguides/config/mgmt/v3)
+- [Google Chrome Extension API](https://developer.chrome.com/extensions/overview)
 
 ## Installation
 
-View [Chrome Web Store](https://chrome.google.com/webstore)
+View in [Chrome Web Store](https://chrome.google.com/webstore).
+
+To install a developer build, follow the [Development Setup](https://github.com/peterlopez/analytics-announcer#development-setup) instructions below.
 
 ## Development Setup
 
@@ -20,7 +27,7 @@ cd analytics-announcer/
 # install dependencies
 npm install
 
-# build for development
+# build for development and start live reload
 npm run dev
 ```
 
@@ -31,10 +38,22 @@ Finally, load the extension into Chrome
 
 ## Deployment
 
+In a terminal,
+
 ``` bash
 # build for production
 npm run prod
 ```
+
+### OAuth Registration
+1. Upload packaged .zip file from `dist/` to the [Chrome Developer Dashboard](https://chrome.google.com/webstore/developer/dashboard).
+1. Copy public key from Chrome Developer Dashboard into `manifest.json`
+1. Go to [Google API console](https://console.developers.google.com/apis) and create a project
+1. Create OAuth Client ID credentials, pasting in Application ID from Chrome Developer Dashboard
+1. Copy OAuth Client ID into `manifest.json`
+1. Return to the Google API console and select Library from the sidebar. Search for "Google Analytics API", click on the correct result and enable it.
+
+More detailed information can be found in Chrome's [OAuth Guide](https://developer.chrome.com/extensions/tut_oauth).
 
 ## License - ISC
 
