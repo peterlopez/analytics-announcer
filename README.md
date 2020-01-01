@@ -58,7 +58,7 @@ In a terminal, from the project root directory, run:
 npm install
 
 # start webpack hot reloading
-npm run dev
+npm run webpack:dev
 
 # in a separate process, start Gulp
 gulp watch
@@ -78,7 +78,7 @@ In a terminal,
 
 ``` bash
 # build for production
-npm run prod
+npm run webpack:prod
 ```
 
 ## License - ISC
