@@ -1,0 +1,28 @@
+{
+    "name": "Google Analytics Announcer",
+    "description": "Create custom alerts for any Google Analytics metric. Get announcements via desktop notifications with customizable sound effects.",
+    "default_locale": "en",
+    "version": "0.1",
+    "manifest_version": 2,
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_title": "Google Analytics Announcer",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "identity",
+        "storage",
+        "notifications",
+        "https://www.google-analytics.com/*"
+    ]
+}
