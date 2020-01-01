@@ -4,6 +4,10 @@ dist/
 npm-debug.log
 yarn-error.log
 
+# Secrets needed to configure the app
+oauth_client_id.json
+webstore_key.json
+
 # Editor directories and files
 .idea
 *.suo
