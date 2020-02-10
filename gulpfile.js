@@ -13,7 +13,7 @@ function compileManifest(cb) {
   cb();
 }
 
-// Move only the minimum required files for Chrome extension into dist/ directory
+// Copy only the minimum required files for Chrome extension into dist/ directory
 // includes webpack bundled Vue.js app
 function createDist(cb) {
   gulp.src([
@@ -23,6 +23,16 @@ function createDist(cb) {
       'background.js',
       'assets/icons/*.*'
     ])
+    .pipe(gulp.dest('./dist/'));
+  cb();
+}
+
+// Copy _locales/ directory including sub-directories
+// into dist/ directory for internationalization
+function createDist_locales(cb) {
+  gulp.src([
+      '_locales/**/*'
+    ], { base: './' })
     .pipe(gulp.dest('./dist/'));
   cb();
 }
@@ -48,7 +58,7 @@ function watch(cb) {
   cb();
 }
 
-const build = gulp.series(compileManifest, createDist);
+const build = gulp.series(compileManifest, createDist, createDist_locales);
 
 exports.watch = watch;
 exports.zip = zipDist;

@@ -1,0 +1,6 @@
+{
+  "test": {
+    "message": "This is a test message",
+    "description": "Test message description"
+  }
+}
